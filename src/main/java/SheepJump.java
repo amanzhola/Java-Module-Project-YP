@@ -3,7 +3,7 @@ import java.util.Random;
 public class SheepJump {
 
     public static void main(String[] args) {
-        // option 1
+      /*  // option 1
         for (int i = 1; i <= 17; i++) {// Здесь нужно объявить цикл
             System.out.println(i + "-я овечка перепрыгнула через забор."); // Это тело цикла
         }
@@ -38,5 +38,28 @@ public class SheepJump {
 
         // Цикл завершён, далее выполнится эта строка:
         System.out.println("Хомяки сыты, овцы целы. Можно отдохнуть!");
+
+       */
+
+        int[] a = new int[5];
+        Random random = new Random();
+
+        for (int i = 0; i < a.length; i++) {
+
+            int d = random.nextInt(a.length - i);
+
+            if (a[d] == 0)
+                a[d] = d + 1;
+
+            System.out.println(a[d] + " - я овечка перепрыгнула через забор.");
+//            System.out.println(d + " - я овечка перепрыгнула через забор.");
+
+//            if(d == a.length - i) a[i] = i;
+//            else a[i] = a.length - i;
+        }
+
+        // Цикл завершён, далее выполнится эта строка:
+        System.out.println("Хомяки сыты, овцы целы. Можно отдохнуть!");
+
     }
 }

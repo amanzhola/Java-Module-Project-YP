@@ -24,12 +24,12 @@ public class Main {
                 String name;
                 int speed = 0;
 
-                System.out.print(" - Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ #" + (i + 1) + ": ");
+                System.out.print(" - Введите название автомобиля #" + (i + 1) + ": ");
                 name = scanner.nextLine();
                 boolean validInput = false;
 
                 while (!validInput) {
-                    System.out.print(" - Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РІР°С€РµРіРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ : ");
+                    System.out.print(" - Введите скорость вашего автомобиля : ");
                     if(scanner.hasNextInt()) {
                         speed = scanner.nextInt();
                         scanner.nextLine();
@@ -38,17 +38,17 @@ public class Main {
                             if (speed > 0 && speed <= maxSpeed) {
                                 break;
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                             }
                         } else {
                             if (speed >= 250 && speed <= maxSpeed) {
                                 break;
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                             }
                         }
                     } else {
-                        System.out.println("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ.");
+                        System.out.println("Пожалуйста, введите целое число.");
                         scanner.nextLine(); // Clear the invalid input
                     }
                 }
@@ -59,12 +59,12 @@ public class Main {
 
             List<String> leaders = race.getCurrentLeaders();
             if (!leaders.isEmpty()) {
-                System.out.println("\nРЎР°РјР°СЏ Р±С‹СЃС‚СЂР°СЏ РјР°С€РёРЅР°: " + String.join(", ", leaders));
+                System.out.println("\nСамая быстрая машина: " + String.join(", ", leaders));
             }
 
-            System.out.print("РҐРѕС‚РёС‚Рµ СЃС‹РіСЂР°С‚СЊ СЃРЅРѕРІР°? (РґР°/РЅРµС‚): ");
+            System.out.print("Хотите сыграть снова? (да/нет): ");
             String response = scanner.nextLine();
-            playAgain = response.equalsIgnoreCase("РґР°");
+            playAgain = response.equalsIgnoreCase("да");
 
             iteration++;
 
@@ -98,12 +98,12 @@ public class Main {
                 String name;
                 int speed = 0;
 
-                System.out.print(" - Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ #" + (i + 1) + ": ");
+                System.out.print(" - Введите название автомобиля #" + (i + 1) + ": ");
                 name = scanner.nextLine();
                 boolean validInput = false;
 
                 while (!validInput) {
-                    System.out.print(" - Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РІР°С€РµРіРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ : ");
+                    System.out.print(" - Введите скорость вашего автомобиля : ");
                     if (scanner.hasNextInt()) {
                         speed = scanner.nextInt();
                         scanner.nextLine();
@@ -112,17 +112,17 @@ public class Main {
                             if (speed > 0 && speed <= maxSpeed) {
                                 validInput = true; // Mark the input as valid
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                             }
                         } else {
                             if (speed >= 250 && speed <= maxSpeed) {
                                 validInput = true; // Mark the input as valid
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                             }
                         }
                     } else {
-                        System.out.println("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ.");
+                        System.out.println("Пожалуйста, введите целое число.");
                         scanner.nextLine(); // Clear the invalid input
                     }
                 }
@@ -133,12 +133,12 @@ public class Main {
 
             List<String> leaders = race.getCurrentLeaders();
             if (!leaders.isEmpty()) {
-                System.out.println("\nРЎР°РјР°СЏ Р±С‹СЃС‚СЂР°СЏ РјР°С€РёРЅР°: " + String.join(", ", leaders));
+                System.out.println("\nСамая быстрая машина: " + String.join(", ", leaders));
             }
 
-            System.out.print("РҐРѕС‚РёС‚Рµ СЃС‹РіСЂР°С‚СЊ СЃРЅРѕРІР°? (РґР°/РЅРµС‚): ");
+            System.out.print("Хотите сыграть снова? (да/нет): ");
             String response = scanner.nextLine();
-            playAgain = response.equalsIgnoreCase("РґР°");
+            playAgain = response.equalsIgnoreCase("да");
 
             isFirstIteration = false; // Set it to false after the first iteration
 
@@ -172,12 +172,12 @@ public class Main {
                 int enteredSpeed = 0;
                 int wrongEntries = 0;
 
-                System.out.print(" - Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ #" + (i + 1) + ": ");
+                System.out.print(" - Введите название автомобиля #" + (i + 1) + ": ");
                 name = scanner.nextLine();
                 boolean validInput = false;
 
                 while (!validInput) {
-                    System.out.print(" - Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РІР°С€РµРіРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ : ");
+                    System.out.print(" - Введите скорость вашего автомобиля : ");
                     if (scanner.hasNextInt()) {
                         enteredSpeed = scanner.nextInt();
                         scanner.nextLine(); // Consume the newline
@@ -186,19 +186,19 @@ public class Main {
                             if (enteredSpeed > 0 && enteredSpeed <= maxSpeed) {
                                 validInput = true; // Mark the input as valid
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                                 wrongEntries++;
                             }
                         } else {
                             if (enteredSpeed >= 250 && enteredSpeed <= maxSpeed) {
                                 validInput = true;
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°: ");
+                                System.out.println(" — Неправильная скорость, попробуйте снова: ");
                                 wrongEntries++;
                             }
                         }
                     } else {
-                        System.out.println("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ.");
+                        System.out.println("Пожалуйста, введите целое число.");
                         scanner.nextLine();
                     }
                 }
@@ -214,12 +214,12 @@ public class Main {
 
             List<String> leaders = race.getCurrentLeaders();
             if (!leaders.isEmpty()) {
-                System.out.println("\nРЎР°РјР°СЏ Р±С‹СЃС‚СЂР°СЏ РјР°С€РёРЅР°: " + String.join(", ", leaders));
+                System.out.println("\nСамая быстрая машина: " + String.join(", ", leaders));
             }
 
-            System.out.print("РҐРѕС‚РёС‚Рµ СЃС‹РіСЂР°С‚СЊ СЃРЅРѕРІР°? (РґР°/РЅРµС‚): ");
+            System.out.print("Хотите сыграть снова? (да/нет): ");
             String response = scanner.nextLine();
-            playAgain = response.equalsIgnoreCase("РґР°");
+            playAgain = response.equalsIgnoreCase("да");
 
             isFirstIteration = false;
 
@@ -228,12 +228,12 @@ public class Main {
         scanner.close();
     }
 }
+*/
 
- */
 // option 3
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         boolean playAgain;
         boolean isFirstIteration = true; // Changed to a boolean
@@ -254,35 +254,42 @@ public class Main {
                 int enteredSpeed = 0;
                 int wrongEntries = 0;
 
-                System.out.print(" - Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ Р°РІС‚РѕРјРѕР±РёР»СЏ #" + (i + 1) + ": ");
-                name = scanner.nextLine();
+                // ? НЕ ДАЁМ ВВЕСТИ ПУСТОЕ НАЗВАНИЕ
+                do {
+                    System.out.print(" - Введите название автомобиля #" + (i + 1) + ": ");
+                    name = scanner.nextLine().trim();
+                    if (name.isEmpty()) {
+                        System.out.println("Название не может быть пустым. Попробуйте снова.");
+                    }
+                } while (name.isEmpty());
+
                 boolean validInput = false;
 
-                // Input for speed with validation
+                // Input for speed with validation // ввод скорости с существующей проверкой
                 while (!validInput) {
-                    System.out.print(" - Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РІР°С€РµРіРѕ Р°РІС‚РѕРјРѕР±РёР»СЏ: ");
+                    System.out.print(" - Введите скорость вашего автомобиля: ");
                     if (scanner.hasNextInt()) {
                         enteredSpeed = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); // Consume the newline // съедаем перевод строки
 
                         // Validate the speed based on the current iteration
                         if (isFirstIteration) {
                             if (enteredSpeed > 0 && enteredSpeed <= maxSpeed) {
                                 validInput = true; // Mark the input as valid
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.");
+                                System.out.println(" — Неправильная скорость, попробуйте снова.");
                                 wrongEntries++;
                             }
                         } else {
                             if (enteredSpeed >= 250 && enteredSpeed <= maxSpeed) {
                                 validInput = true; // Mark the input as valid
                             } else {
-                                System.out.println(" вЂ” РќРµРїСЂР°РІРёР»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.");
+                                System.out.println(" — Неправильная скорость, попробуйте снова.");
                                 wrongEntries++;
                             }
                         }
                     } else {
-                        System.out.println("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ.");
+                        System.out.println("Пожалуйста, введите целое число.");
                         scanner.nextLine(); // Consume the invalid input
                     }
                 }
@@ -298,25 +305,25 @@ public class Main {
                 race.addCar(car);
 
                 // Append the details to the results StringBuilder
-                results.append(" вЂ” РђРІС‚РѕРјРѕР±РёР»СЊ: ").append(name)
-                        .append(", Р’РІРµРґРµРЅРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ: ").append(enteredSpeed)
-                        .append(", РљРѕР»РёС‡РµСЃС‚РІРѕ РЅРµРїСЂР°РІРёР»СЊРЅС‹С… РїРѕРїС‹С‚РѕРє: ").append(wrongEntries)
-                        .append(", РљРѕРЅРµС‡РЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ: ").append((int) finalSpeed).append("\n");
+                results.append(" — Автомобиль: ").append(name)
+                        .append(", Введенная скорость: ").append(enteredSpeed)
+                        .append(", Количество неправильных попыток: ").append(wrongEntries)
+                        .append(", Конечная скорость: ").append((int) finalSpeed).append("\n");
             }
 
             // Find and display the current leaders after entries for all cars
             List<String> leaders = race.getCurrentLeaders();
             if (!leaders.isEmpty()) {
-                System.out.println("\nРЎР°РјР°СЏ Р±С‹СЃС‚СЂР°СЏ РјР°С€РёРЅР°: " + String.join(", ", leaders));
+                System.out.println("\nСамая быстрая машина: " + String.join(", ", leaders));
             }
 
             // Display all input details after all cars have been entered
-            System.out.println(results.toString());
+            System.out.println(results);
 
             // Ask the user if they want to play again
-            System.out.print("РҐРѕС‚РёС‚Рµ СЃС‹РіСЂР°С‚СЊ СЃРЅРѕРІР°? (РґР°/РЅРµС‚): ");
+            System.out.print("Хотите сыграть снова? (да/нет): ");
             String response = scanner.nextLine();
-            playAgain = response.equalsIgnoreCase("РґР°");
+            playAgain = response.equalsIgnoreCase("да");
 
             isFirstIteration = false;
 
